@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite Home Clone</title>
+  <meta name="google" content="notranslate">
+  <link rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon">
+  <style>
+    @font-face {
+      font-family: ManropeRegular;
+      src: url('assets/Manrope-Regular.ttf');
+      font-display: swap;
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: ManropeBold;
+      src: url('assets/Manrope-Bold.ttf');
+      font-display: swap;
+      font-weight: 700;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <output class="n0-alert-message">
+    <div class="left">
+      <svg>
+        <use href="spriteSvg.svg#alert"></use>
+      </svg>
+    </div>
+    <div class="right">
+      This website is not official, it's just a project to practice.
+    </div>
+  </output>
+  <header class="n1-header">
+    <div class="left">
+      <img src="assets/vite.svg" alt="Vite Logo" class="vite-logo item-left">
+      <h3 class="item-left">Vite</h3>
+      <search class="item-left">
+        <article class="search-left">
+          <svg>
+            <use href="spriteSvg.svg#magnifyinglass"></use>
+          </svg>
+        </article>
+        <article class="search-right">Search</article>
+      </search>
+    </div>
+    <div class="right">
+      <a class="item-right" href="https://vite.dev/guide/">Guide</a>
+      <a class="item-right" href="https://vite.dev/config/">Config</a>
+      <a class="item-right" href="https://vite.dev/plugins/">Plugins</a>
+      <div class="item-right drop-resource drop-down-container" href="javascript:void(0)">
+        <button>Resources <svg>
+            <use href="spriteSvg.svg#chevron-down"></use>
+          </svg></button>
+        <aside class="drop-down-resources">
+          <div class="top">
+            <a href="https://vite.dev/team">Team</a>
+            <a href="https://vite.dev/blog">Blog</a>
+            <a href="https://vite.dev/releases">Releases</a>
+          </div>
+
+          <div class="bottom">
+            <a href="https://github.com/vitejs/awesome-vite">Awesome Vite</a>
+            <a href="https://viteconf.org/">Vite Conf</a>
+            <a href="https://dev.to/t/vite">Dev Community</a>
+            <a href="https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md">ChangeLog</a>
+            <a href="https://github.com/vitejs/vite/blob/main/CONTRIBUTING.md">Contributing</a>
+          </div>
+        </aside>
+      </div>
+      <div class="item-right drop-resource drop-down-container" href="javascript:void(0)">
+        <button>Version <svg>
+            <use href="spriteSvg.svg#chevron-down"></use>
+          </svg></button>
+        <aside class="drop-down-resources">
+          <div class="top" style="border-bottom: none;">
+            <a href="https://vite.dev/team">Vite 4 Docs</a>
+            <a href="https://vite.dev/blog">Vite 3 Docs</a>
+            <a href="https://vite.dev/releases">Vite 2 Docs</a>
+          </div>
+        </aside>
+      </div>
+      <div class="item-right drop-resource drop-down-container" href="javascript:void(0)">
+        <button><svg id="translateD">
+            <use href="spriteSvg.svg#translateD"></use>
+          </svg><svg>
+            <use href="spriteSvg.svg#chevron-down"></use>
+          </svg></button>
+        <aside class="drop-down-resources">
+          <div class="top" style="border-bottom: none;">
+            <a href="">English</a>
+            <a href="">日本語</a>
+            <a href="">Español</a>
+            <a href="">Português</a>
+            <a href="">한국어</a>
+          </div>
+        </aside>
+      </div>
+      <a class="item-right red" href="https://x.com/vite_js">
+        <svg>
+          <use href="spriteSvg.svg#equis"></use>
+        </svg>
+      </a>
+      <a class="item-right red" href="https://chat.vite.dev/">
+        <svg>
+          <use href="spriteSvg.svg#discord"></use>
+        </svg>
+      </a>
+      <a class="item-right red" href="https://github.com/vitejs/vite">
+        <svg>
+          <use href="spriteSvg.svg#gitHub"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <main class="n2-portrait">
+    <div class="portrait-top">
+      <button class="btn-talk">
+        <svg>
+          <use href="spriteSvg.svg#mini-vite"></use>
+        </svg><span>ViteConf 2050 Talks</span>
+      </button>
+
+      <h1>The Build Tool</h1>
+      <h2>for the Web</h2>
+      <p>Vite is a blazing fast frontend build tool powering</p>
+      <p>the next generation of web applications. </p>
+      <aside class="wrapper-buttons">
+        <button>Get Starded</button>
+        <button>
+          <svg>
+            <use href="spriteSvg.svg#gitHub"></use>
+          </svg>
+          <span>Github</span>
+        </button>
+      </aside>
+    </div>
+    <div class="portrait-bottom">
+      <svg class="input-lines" data-v-808e934e="" data-v-ef39b38f="" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 844 644" fill="none">
+        <g data-v-808e934e="">
+          <path data-v-808e934e=""
+            d="M843.505 284.659L752.638 284.659C718.596 284.659 684.866 280.049 653.251 271.077L598.822 255.629L0.675021 1.00011"
+            stroke="url(#base_gradient)" stroke-width="1.2" style="opacity: 0.8;"></path>
+          <g data-v-89efd6b1="" data-v-808e934e="" _gsap="[object Object]">
+            <path data-v-89efd6b1=""
+              d="M843.505 284.659L752.638 284.659C718.596 284.659 684.866 280.049 653.251 271.077L598.822 255.629L0.675021 1.00011"
+              stroke="url(#glow_gradient_0.hta7tq8gsww)" stroke-width="1.2" mask="url(#glow_mask_0.hta7tq8gsww)"
+              class="svg-path"></path>
+
+            <defs data-v-89efd6b1="">
+              <mask data-v-89efd6b1="" id="glow_mask_0.hta7tq8gsww">
+                <path data-v-89efd6b1=""
+                  d="M843.505 284.659L752.638 284.659C718.596 284.659 684.866 280.049 653.251 271.077L598.822 255.629L0.675021 1.00011"
+                  fill="black"></path>
+                <circle data-v-89efd6b1="" cx="843.5050048828125" cy="284.65899658203125" r="0" fill="white"></circle>
+              </mask>
+              <radialGradient data-v-89efd6b1="" id="glow_gradient_0.hta7tq8gsww" cx="843.5050048828125"
+                cy="284.65899658203125" r="0" gradientUnits="userSpaceOnUse">
+                <stop data-v-89efd6b1="" offset="0%" stop-opacity="1" stop-color="#41D1FF"></stop>
+                <stop data-v-89efd6b1="" offset="100%" stop-opacity="0" stop-color="#41D1FF"></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <g data-v-808e934e="">
+          <path data-v-808e934e=""
+            d="M843.505 298.181L724.342 297.36C708.881 297.36 693.45 296.409 678.22 294.518L598.822 284.659C592.82 284.659 200.538 190.002 0.675028 164.892"
+            stroke="url(#base_gradient)" stroke-width="1.2" style="opacity: 0.8;"></path>
+          <g data-v-89efd6b1="" data-v-808e934e="" _gsap="[object Object]">
+            <path data-v-89efd6b1=""
+              d="M843.505 298.181L724.342 297.36C708.881 297.36 693.45 296.409 678.22 294.518L598.822 284.659C592.82 284.659 200.538 190.002 0.675028 164.892"
+              stroke="url(#glow_gradient_0.7yrpmahunzs)" stroke-width="1.2" mask="url(#glow_mask_0.7yrpmahunzs)"
+              class="svg-path"></path>
+
+            <defs data-v-89efd6b1="">
+              <mask data-v-89efd6b1="" id="glow_mask_0.7yrpmahunzs">
+                <path data-v-89efd6b1=""
+                  d="M843.505 298.181L724.342 297.36C708.881 297.36 693.45 296.409 678.22 294.518L598.822 284.659C592.82 284.659 200.538 190.002 0.675028 164.892"
+                  fill="black"></path>
+                <circle data-v-89efd6b1="" cx="843.5050048828125" cy="298.1809997558594" r="0" fill="white"></circle>
+              </mask>
+              <radialGradient data-v-89efd6b1="" id="glow_gradient_0.7yrpmahunzs" cx="843.5050048828125"
+                cy="298.1809997558594" r="0" gradientUnits="userSpaceOnUse">
+                <stop data-v-89efd6b1="" offset="0%" stop-opacity="1" stop-color="#41D1FF"></stop>
+                <stop data-v-89efd6b1="" offset="100%" stop-opacity="0" stop-color="#41D1FF"></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <g data-v-808e934e="">
+          <path data-v-808e934e="" d="M843.505 311.703L701.108 310.061L598.822 305.136L0.675049 256.071"
+            stroke="url(#base_gradient)" stroke-width="1.2" style="opacity: 0.8;"></path>
+          <g data-v-89efd6b1="" data-v-808e934e="" _gsap="[object Object]">
+            <path data-v-89efd6b1="" d="M843.505 311.703L701.108 310.061L598.822 305.136L0.675049 256.071"
+              stroke="url(#glow_gradient_0.olmyqsd2nnk)" stroke-width="1.2" mask="url(#glow_mask_0.olmyqsd2nnk)"
+              class="svg-path"></path>
+            <circle data-v-89efd6b1="" cx="406.1966857910156" cy="289.3352355957031" r="3" fill="#ff8d67"
+              class="circle-dot" style="--dot-color: #ff8d67;"></circle><text data-v-89efd6b1="" x="406.1966857910156"
+              y="304.3352355957031" fill="#a3a3a3" font-family="Inter, sans-serif" font-size="11px" font-style="normal"
+              font-weight="400" text-anchor="middle" alignment-baseline="hanging"
+              class="label label--visible">.svelte</text>
+            <defs data-v-89efd6b1="">
+              <mask data-v-89efd6b1="" id="glow_mask_0.olmyqsd2nnk">
+                <path data-v-89efd6b1="" d="M843.505 311.703L701.108 310.061L598.822 305.136L0.675049 256.071"
+                  fill="black"></path>
+                <circle data-v-89efd6b1="" cx="406.1966857910156" cy="289.3352355957031" r="30" fill="white"></circle>
+              </mask>
+              <radialGradient data-v-89efd6b1="" id="glow_gradient_0.olmyqsd2nnk" cx="406.1966857910156"
+                cy="289.3352355957031" r="30" gradientUnits="userSpaceOnUse">
+                <stop data-v-89efd6b1="" offset="0%" stop-opacity="1" stop-color="#ff8d67"></stop>
+                <stop data-v-89efd6b1="" offset="100%" stop-opacity="0" stop-color="#ff8d67"></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <g data-v-808e934e="">
+          <path data-v-808e934e="" d="M843.505 325.224L598.822 326.002L0.675049 321.858" stroke="url(#base_gradient)"
+            stroke-width="1.2" style="opacity: 0.8;"></path>
+          <g data-v-89efd6b1="" data-v-808e934e="" _gsap="[object Object]">
+            <path data-v-89efd6b1="" d="M843.505 325.224L598.822 326.002L0.675049 321.858"
+              stroke="url(#glow_gradient_0.a7f11e0dy6)" stroke-width="1.2" mask="url(#glow_mask_0.a7f11e0dy6)"
+              class="svg-path"></path>
+            <defs data-v-89efd6b1="">
+              <mask data-v-89efd6b1="" id="glow_mask_0.a7f11e0dy6">
+                <path data-v-89efd6b1="" d="M843.505 325.224L598.822 326.002L0.675049 321.858" fill="black"></path>
+                <circle data-v-89efd6b1="" cx="843.5050048828125" cy="325.2239990234375" r="0" fill="white"></circle>
+              </mask>
+              <radialGradient data-v-89efd6b1="" id="glow_gradient_0.a7f11e0dy6" cx="843.5050048828125"
+                cy="325.2239990234375" r="0" gradientUnits="userSpaceOnUse">
+                <stop data-v-89efd6b1="" offset="0%" stop-opacity="1" stop-color="#41D1FF"></stop>
+                <stop data-v-89efd6b1="" offset="100%" stop-opacity="0" stop-color="#41D1FF"></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <g data-v-808e934e="">
+          <path data-v-808e934e="" d="M843.505 338.746L701.108 340.388L598.822 345.442L0.675038 387.646"
+            stroke="url(#base_gradient)" stroke-width="1.2" style="opacity: 0.8;"></path>
+          <g data-v-89efd6b1="" data-v-808e934e="" _gsap="[object Object]">
+            <path data-v-89efd6b1="" d="M843.505 338.746L701.108 340.388L598.822 345.442L0.675038 387.646"
+              stroke="url(#glow_gradient_0.6q9nvz5q4g2)" stroke-width="1.2" mask="url(#glow_mask_0.6q9nvz5q4g2)"
+              class="svg-path"></path>
+
+            <defs data-v-89efd6b1="">
+              <mask data-v-89efd6b1="" id="glow_mask_0.6q9nvz5q4g2">
+                <path data-v-89efd6b1="" d="M843.505 338.746L701.108 340.388L598.822 345.442L0.675038 387.646"
+                  fill="black"></path>
+                <circle data-v-89efd6b1="" cx="843.5050048828125" cy="338.7460021972656" r="0" fill="white"></circle>
+              </mask>
+              <radialGradient data-v-89efd6b1="" id="glow_gradient_0.6q9nvz5q4g2" cx="843.5050048828125"
+                cy="338.7460021972656" r="0" gradientUnits="userSpaceOnUse">
+                <stop data-v-89efd6b1="" offset="0%" stop-opacity="1" stop-color="#40b782"></stop>
+                <stop data-v-89efd6b1="" offset="100%" stop-opacity="0" stop-color="#40b782"></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <g data-v-808e934e="">
+          <path data-v-808e934e=""
+            d="M843.505 352.268L724.342 353.088C708.881 353.088 693.45 354.039 678.22 355.93L598.822 365.789L0.675067 478.825"
+            stroke="url(#base_gradient)" stroke-width="1.2" style="opacity: 0.8;"></path>
+          <g data-v-89efd6b1="" data-v-808e934e="" _gsap="[object Object]">
+            <path data-v-89efd6b1=""
+              d="M843.505 352.268L724.342 353.088C708.881 353.088 693.45 354.039 678.22 355.93L598.822 365.789L0.675067 478.825"
+              stroke="url(#glow_gradient_0.hty163wlbrn)" stroke-width="1.2" mask="url(#glow_mask_0.hty163wlbrn)"
+              class="svg-path"></path>
+            <circle data-v-89efd6b1="" cx="405.5634460449219" cy="402.3104248046875" r="3" fill="#9fe6fd"
+              class="circle-dot" style="--dot-color: #9fe6fd;"></circle><text data-v-89efd6b1="" x="405.5634460449219"
+              y="417.3104248046875" fill="#a3a3a3" font-family="Inter, sans-serif" font-size="11px" font-style="normal"
+              font-weight="400" text-anchor="middle" alignment-baseline="hanging"
+              class="label label--visible">.jsx</text>
+            <defs data-v-89efd6b1="">
+              <mask data-v-89efd6b1="" id="glow_mask_0.hty163wlbrn">
+                <path data-v-89efd6b1=""
+                  d="M843.505 352.268L724.342 353.088C708.881 353.088 693.45 354.039 678.22 355.93L598.822 365.789L0.675067 478.825"
+                  fill="black"></path>
+                <circle data-v-89efd6b1="" cx="405.5634460449219" cy="402.3104248046875" r="30" fill="white"></circle>
+              </mask>
+              <radialGradient data-v-89efd6b1="" id="glow_gradient_0.hty163wlbrn" cx="405.5634460449219"
+                cy="402.3104248046875" r="30" gradientUnits="userSpaceOnUse">
+                <stop data-v-89efd6b1="" offset="0%" stop-opacity="1" stop-color="#41D1FF"></stop>
+                <stop data-v-89efd6b1="" offset="100%" stop-opacity="0" stop-color="#41D1FF"></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <g data-v-808e934e="">
+          <path data-v-808e934e=""
+            d="M843.505 365.789L752.638 365.789C718.596 365.789 684.866 370.399 653.251 379.372L598.822 394.82L0.675049 642.717"
+            stroke="url(#base_gradient)" stroke-width="1.2" style="opacity: 0.8;"></path>
+          <g data-v-89efd6b1="" data-v-808e934e="" _gsap="[object Object]">
+            <path data-v-89efd6b1=""
+              d="M843.505 365.789L752.638 365.789C718.596 365.789 684.866 370.399 653.251 379.372L598.822 394.82L0.675049 642.717"
+              stroke="url(#glow_gradient_0.nw09w44svdh)" stroke-width="1.2" mask="url(#glow_mask_0.nw09w44svdh)"
+              class="svg-path"></path>
+            <circle data-v-89efd6b1="" cx="345.042724609375" cy="499.9967041015625" r="3" fill="#9fe6fd"
+              class="circle-dot" style="--dot-color: #9fe6fd;"></circle><text data-v-89efd6b1="" x="345.042724609375"
+              y="514.9967041015625" fill="#a3a3a3" font-family="Inter, sans-serif" font-size="11px" font-style="normal"
+              font-weight="400" text-anchor="middle" alignment-baseline="hanging"
+              class="label label--visible">.sass</text>
+            <defs data-v-89efd6b1="">
+              <mask data-v-89efd6b1="" id="glow_mask_0.nw09w44svdh">
+                <path data-v-89efd6b1=""
+                  d="M843.505 365.789L752.638 365.789C718.596 365.789 684.866 370.399 653.251 379.372L598.822 394.82L0.675049 642.717"
+                  fill="black"></path>
+                <circle data-v-89efd6b1="" cx="345.042724609375" cy="499.9967041015625" r="30" fill="white"></circle>
+              </mask>
+              <radialGradient data-v-89efd6b1="" id="glow_gradient_0.nw09w44svdh" cx="345.042724609375"
+                cy="499.9967041015625" r="30" gradientUnits="userSpaceOnUse">
+                <stop data-v-89efd6b1="" offset="0%" stop-opacity="1" stop-color="#41D1FF"></stop>
+                <stop data-v-89efd6b1="" offset="100%" stop-opacity="0" stop-color="#41D1FF"></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <defs data-v-808e934e="">
+          <linearGradient id="base_gradient" x1="88.1032" y1="324.167" x2="843.505" y2="324.167"
+            gradientUnits="userSpaceOnUse" data-v-808e934e="">
+            <stop offset="0" stop-color="#c6caff" stop-opacity="0" data-v-808e934e=""></stop>
+            <stop offset="0.2" stop-color="#c6caff" stop-opacity="0.1" data-v-808e934e=""></stop>
+            <stop offset="0.4" stop-color="white" stop-opacity="0.4" data-v-808e934e=""></stop>
+            <stop offset="0.6" stop-color="#c6caff" stop-opacity="0.2" data-v-808e934e=""></stop>
+            <stop offset="0.8" stop-color="#c6caff" stop-opacity="0.2" data-v-808e934e=""></stop>
+            <stop offset="0.9" stop-color="#c6caff" stop-opacity="0" data-v-808e934e=""></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="vite-motor">
+        <svg class="mySvg">
+          <use href="spriteSvg.svg#vite-logo"></use>
+        </svg>
+      </div>
+
+      <svg class="output-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 844 40" fill="none" style="opacity:0.8;"
+        data-v-ef39b38f="" data-v-5cbf1504="">
+        <path d="M843.463 1.3315L245.316 5.47507L0.633077 4.69725" stroke="url(#output_gradient)" stroke-width="1.2"
+          data-v-5cbf1504=""></path><!--[-->
+        <g data-v-5cbf1504="">
+          <g data-v-5cbf1504="" data-v-89efd6b1="">
+            <path d="M843.463 1.3315L245.316 5.47507L0.633077 4.69725" stroke="url(#glow_gradient_0.kwsxkjwqugk)"
+              stroke-width="1.2" mask="url(#glow_mask_0.kwsxkjwqugk)" class="svg-path" data-v-89efd6b1=""></path>
+            <circle cx="505.4951171875" cy="3.6727375984191895" r="2.424432" fill="#d499ff" class="circle-dot"
+              style="--dot-color: #d499ff" data-v-89efd6b1=""></circle><text x="505.4951171875" y="18.67273759841919"
+              fill="#a3a3a3" font-family="Inter, sans-serif" font-size="11px" font-style="normal" font-weight="400"
+              text-anchor="middle" alignment-baseline="hanging" class="label" data-v-89efd6b1="">.html</text>
+            <defs data-v-89efd6b1="">
+              <mask id="glow_mask_0.kwsxkjwqugk" data-v-89efd6b1="">
+                <path d="M843.463 1.3315L245.316 5.47507L0.633077 4.69725" fill="black" data-v-89efd6b1=""></path>
+                <circle cx="505.4951171875" cy="3.6727375984191895" r="20.05419" fill="white" data-v-89efd6b1="">
+                </circle>
+              </mask>
+              <radialGradient id="glow_gradient_0.kwsxkjwqugk" cx="505.4951171875" cy="3.6727375984191895" r="20.05419"
+                gradientUnits="userSpaceOnUse" data-v-89efd6b1="">
+                <stop offset="0%" stop-color="#BD34FE" stop-opacity="1" data-v-89efd6b1=""></stop>
+                <stop offset="100%" stop-color="#BD34FE" stop-opacity="0" data-v-89efd6b1=""></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <g data-v-5cbf1504="">
+          <g data-v-5cbf1504="" data-v-89efd6b1="">
+            <path d="M843.463 1.3315L245.316 5.47507L0.633077 4.69725" stroke="url(#glow_gradient_0.6m5ttlqfp97)"
+              stroke-width="1.2" mask="url(#glow_mask_0.6m5ttlqfp97)" class="svg-path" data-v-89efd6b1=""></path>
+            <circle cx="563.6213989257812" cy="3.27008056640625" r="2.911022" fill="#d499ff" class="circle-dot"
+              style="--dot-color: #d499ff" data-v-89efd6b1=""></circle><text x="563.6213989257812" y="18.27008056640625"
+              fill="#a3a3a3" font-family="Inter, sans-serif" font-size="11px" font-style="normal" font-weight="400"
+              text-anchor="middle" alignment-baseline="hanging" class="label" data-v-89efd6b1="">.css</text>
+            <defs data-v-89efd6b1="">
+              <mask id="glow_mask_0.6m5ttlqfp97" data-v-89efd6b1="">
+                <path d="M843.463 1.3315L245.316 5.47507L0.633077 4.69725" fill="black" data-v-89efd6b1=""></path>
+                <circle cx="563.6213989257812" cy="3.27008056640625" r="28.46244" fill="white" data-v-89efd6b1="">
+                </circle>
+              </mask>
+              <radialGradient id="glow_gradient_0.6m5ttlqfp97" cx="563.6213989257812" cy="3.27008056640625" r="28.46244"
+                gradientUnits="userSpaceOnUse" data-v-89efd6b1="">
+                <stop offset="0%" stop-color="#BD34FE" stop-opacity="1" data-v-89efd6b1=""></stop>
+                <stop offset="100%" stop-color="#BD34FE" stop-opacity="0" data-v-89efd6b1=""></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g>
+        <g data-v-5cbf1504="">
+          <g data-v-5cbf1504="" data-v-89efd6b1="">
+            <path d="M843.463 1.3315L245.316 5.47507L0.633077 4.69725" stroke="url(#glow_gradient_0.oyrvdds0ex)"
+              stroke-width="1.2" mask="url(#glow_mask_0.oyrvdds0ex)" class="svg-path" data-v-89efd6b1=""></path>
+            <circle cx="678.1630249023438" cy="2.476619243621826" r="3" fill="#d499ff" class="circle-dot"
+              style="--dot-color: #d499ff" data-v-89efd6b1=""></circle><text x="678.1630249023438"
+              y="17.476619243621826" fill="#a3a3a3" font-family="Inter, sans-serif" font-size="11px" font-style="normal"
+              font-weight="400" text-anchor="middle" alignment-baseline="hanging" class="label"
+              data-v-89efd6b1="">.js</text>
+            <defs data-v-89efd6b1="">
+              <mask id="glow_mask_0.oyrvdds0ex" data-v-89efd6b1="">
+                <path d="M843.463 1.3315L245.316 5.47507L0.633077 4.69725" fill="black" data-v-89efd6b1=""></path>
+                <circle cx="678.1630249023438" cy="2.476619243621826" r="30" fill="white" data-v-89efd6b1=""></circle>
+              </mask>
+              <radialGradient id="glow_gradient_0.oyrvdds0ex" cx="678.1630249023438" cy="2.476619243621826" r="30"
+                gradientUnits="userSpaceOnUse" data-v-89efd6b1="">
+                <stop offset="0%" stop-color="#BD34FE" stop-opacity="1" data-v-89efd6b1=""></stop>
+                <stop offset="100%" stop-color="#BD34FE" stop-opacity="0" data-v-89efd6b1=""></stop>
+              </radialGradient>
+            </defs>
+          </g>
+        </g><!--]-->
+        <defs data-v-5cbf1504="">
+          <linearGradient id="output_gradient" gradientUnits="userSpaceOnUse" data-v-5cbf1504="">
+            <stop offset="0.1" stop-color="#E0C8FF" stop-opacity="0" data-v-5cbf1504=""></stop>
+            <stop offset="0.4" stop-color="#E0C8FF" stop-opacity="0.4" data-v-5cbf1504=""></stop>
+            <stop offset="1" stop-color="#E0C8FF" stop-opacity="0" data-v-5cbf1504=""></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="container-msg">
+        <svg>
+          <use href="spriteSvg.svg#lines"></use>
+        </svg>
+        <h4>Redefining developer experience</h4>
+        <p>Vite makes web development simple again</p>
+      </div>
+    </div>
+  </main>
+  <section class="n3-first-grid">
+    <div class="container-grid">
+      <article class="item-1 item-grid">
+        <div class="right-top">
+          <div class="stick"></div>
+          <div class="stick"></div>
+          <h3>Ready in 96ms</h3>
+        </div>
+        <div class="bottom-left bottom">
+          <h2>Instant Server start</h2>
+          <p>On demand file serving over</p>
+          <p>native ESM, no bundling required!</p>
+        </div>
+      </article>
+      <article class="item-2 item-grid">
+        <div class="top container">
+          <aside class="top-right">
+            <div class="tam tam-1"></div>
+            <div class="tam tam-2"></div>
+            <div class="tam tam-3"></div>
+            <div class="container-subitems">
+              <div class="minitamp"></div>
+              <div class="minitamp"></div>
+              <div class="minitamp"></div>
+            </div>
+          </aside>
+          <aside class="top-left">
+            <div class="newItem">
+              <div class="item-left">1</div>
+              <div class="item-right item-right-n1">
+                <div class="palo"></div>
+              </div>
+            </div>
+            <div class="newItem">
+              <div class="item-left">2</div>
+              <div class="item-right item-right-n2">
+                <div class="palo"></div>
+              </div>
+            </div>
+            <div class="newItem">
+              <div class="item-left">3</div>
+              <div class="item-right item-right-n3">
+                <div class="palo"></div>
+              </div>
+            </div>
+            <div class="newItem">
+              <div class="item-left">4</div>
+              <div class="item-right item-right-n4">
+                <div class="palo"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="bottom container">
+          <h2>Lightning fast HMR</h2>
+          <p>Hot module Replacemente (HMR) that</p>
+          <p>stays fast regardless of app size</p>
+        </div>
+      </article>
+      <article class="item-3 item-grid">
+        <div class="top">
+          <section class="container-techs">
+            <div class="tech"></div>
+            <div class="tech json">
+              <svg>
+                <use href="spriteSvg.svg#json"></use>
+              </svg>
+            </div>
+            <div class="tech"></div>
+            <div class="tech"></div>
+            <div class="tech"></div>
+            <div class="tech"></div>
+            <div class="tech"></div>
+
+            <div class="tech css">
+              <svg>
+                <use href="spriteSvg.svg#css"></use>
+              </svg>
+            </div>
+            <div class="tech js">
+              <svg>
+                <use href="spriteSvg.svg#javascript"></use>
+              </svg>
+            </div>
+            <div class="tech typescript">
+              <svg>
+                <use href="spriteSvg.svg#typescript"></use>
+              </svg>
+            </div>
+            <div class="tech webassembly">
+              <svg>
+                <use href="spriteSvg.svg#webAssembly"></use>
+              </svg>
+            </div>
+            <div class="tech">
+            </div>
+            <div class="tech"></div>
+            <div class="tech"></div>
+            <div class="tech"></div>
+            <div class="tech"></div>
+            <div class="tech">
+              <svg>
+                <use href="spriteSvg.svg#postCss"></use>
+              </svg>
+            </div>
+            <div class="tech"></div>
+          </section>
+        </div>
+        <div class="bottom">
+          <h2>Rich Features</h2>
+          <p>Out-of-the-box support for</p>
+          <p>TypeScript, JSX, CSS and more.</p>
+        </div>
+      </article>
+      <article class="item-4 item-grid">
+        <div class="top">
+          <svg class="n1 myN">
+            <use href="spriteSvg.svg#leftLines"></use>
+          </svg>
+          <svg class="n2 myN">
+            <use href="spriteSvg.svg#bolt"></use>
+          </svg>
+          <svg class="n3 myN">
+            <use href="spriteSvg.svg#rightLines"></use>
+          </svg>
+        </div>
+        <div class="bottom">
+          <h2>Optimized build</h2>
+          <p>Pre-configured Rollup build with</p>
+          <p>multi-page and library mode support.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <aside class="n4-message">
+    <div class="message">
+      <svg>
+        <use href="spriteSvg.svg#lines2"></use>
+      </svg>
+      <h4>A shared foundation to build upon</h4>
+      <p>Vite has been a game changer for the industry.</p>
+    </div>
+  </aside>
+  <section class="n5-second-grid">
+    <div class="container-grid">
+      <article class="item-1 item-grid">
+        <div class="right-top">
+          <img src="assets/image1.avif" class="imagen" alt="image" loading="lazy">
+        </div>
+        <div class="container-bottom">
+          <div class="bottom-left bottom">
+            <h2>Fully Typed Api</h2>
+            <p>Designed to be built on top of.</p>
+          </div>
+        </div>
+      </article>
+      <article class="item-2 item-grid">
+        <div class="right-top">
+          <svg>
+            <use href="spriteSvg.svg#rollupvite"></use>
+          </svg>
+        </div>
+        <div class="bottom-container">
+          <div class="bottom-left bottom">
+            <h2>Flexible Plugin System</h2>
+            <p>Vite plugins extends Rollup's well-designed plugin </p>
+            <p>interface with a few extra Vite-specific options</p>
+          </div>
+        </div>
+      </article>
+      <article class="item-3 item-grid">
+        <div class="top">
+          <img src="assets/image2.avif" alt="image grid">
+        </div>
+        <div class="bottom">
+          <h2>Continuous ecosystem integration</h2>
+          <p>Our CI continously tests Vite changes against downstream</p>
+          <p>projects, allowing us to improve Vite with stability and confidence</p>
+        </div>
+      </article>
+      <article class="item-4 item-grid">
+        <div class="top">
+          <div class="flechas"></div>
+          <svg class="mySvg">
+            <use href="spriteSvg.svg#jScheme"></use>
+          </svg>
+          <div class="message-1 message">Client Transform</div>
+          <div class="message-2 message">Server Transform</div>
+        </div>
+        <div class="bottom">
+          <h2>First class SSR Support</h2>
+          <p>It's never been easier</p>
+          <p>to setup custom SSR or build </p>
+          <p> your own SSR framework</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="n6-tools">
+    <h4>Powering your favorite</h4>
+    <h4>frameworks and tools</h4>
+    <div class="grid-techs">
+      <aside class="row">
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+      </aside>
+      <aside class="row">
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech vitest">
+          <svg>
+            <use href="spriteSvg.svg#vitest"></use>
+          </svg>
+        </div>
+        <div class="tech react">
+          <svg>
+            <use href="spriteSvg.svg#react"></use>
+          </svg>
+        </div>
+        <div class="tech angular">
+          <svg>
+            <use href="spriteSvg.svg#angular"></use>
+          </svg>
+        </div>
+        <div class="tech vite">
+          <svg>
+            <use href="spriteSvg.svg#vite"></use>
+          </svg>
+        </div>
+        <div class="tech solid">
+          <svg>
+            <use href="spriteSvg.svg#solid"></use>
+          </svg>
+        </div>
+        <div class="tech svelte">
+          <svg>
+            <use href="spriteSvg.svg#svelte"></use>
+          </svg>
+        </div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+      </aside>
+      <aside class="row">
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech preact">
+          <svg>
+            <use href="spriteSvg.svg#preact"></use>
+          </svg>
+        </div>
+        <div class="tech astro">
+          <svg>
+            <use href="spriteSvg.svg#astro"></use>
+          </svg>
+        </div>
+        <div class="tech remix">
+          <svg>
+            <use href="spriteSvg.svg#remix"></use>
+          </svg>
+        </div>
+        <div class="tech nuxt">
+          <svg>
+            <use href="spriteSvg.svg#nuxt"></use>
+          </svg>
+        </div>
+        <div class="tech qwik">
+          <svg>
+            <use href="spriteSvg.svg#qwik"></use>
+          </svg>
+        </div>
+        <div class="tech redwood">
+          <svg>
+            <use href="spriteSvg.svg#redwood"></use>
+          </svg>
+        </div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+      </aside>
+      <aside class="row">
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech analog">
+          <svg>
+            <use href="spriteSvg.svg#analog"></use>
+          </svg>
+        </div>
+        <div class="tech playwright">
+          <svg>
+            <use href="spriteSvg.svg#playwright"></use>
+          </svg>
+        </div>
+        <div class="tech storybook">
+          <svg>
+            <use href="spriteSvg.svg#storybook"></use>
+          </svg>
+        </div>
+        <div class="tech marco">
+          <svg>
+            <use href="spriteSvg.svg#marco"></use>
+          </svg>
+        </div>
+        <div class="tech laravel">
+          <svg>
+            <use href="spriteSvg.svg#laravel"></use>
+          </svg>
+        </div>
+        <div class="tech ember">
+          <svg>
+            <use href="spriteSvg.svg#ember"></use>
+          </svg>
+        </div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+      </aside>
+      <aside class="row">
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+        <div class="tech"></div>
+      </aside>
+    </div>
+
+  </section>
+  <section class="n7-container-community">
+    <h2>Loved by the community</h2>
+    <p class="parraf-top">Don't take our word for it - listen to what</p>
+    <p class="parraf-top">Vite community members have to say.</p>
+    <footer class="container-grid">
+      <div class="column column1">
+        <div class="item item1">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Ryan Carniato</h5>
+              <p>@RyanCarniato</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>I'm loving what Vite enables. We've found building SolidStart that it is less a metaframework but a
+              system of symbiotic Vite plugins. While built with SolidJS in mind, they should scale from our simplest
+              template to opinionated starter. We're building an ecosystem on Vite.</p>
+          </footer>
+        </div>
+        <div class="item item2">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Rich Harris</h5>
+              <p>@Rich_Harris</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>Vite is basically the united nations of JavaScript at this point. I'll be there as a representative of
+              Sveltelandia</p>
+          </footer>
+        </div>
+        <div class="item item3">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>David East</h5>
+              <p>@_davideast</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>Each and every time I use Vite, I feel a true sense of pure and unbridled joy.</p>
+          </footer>
+        </div>
+        <div class="item itemhidden item4-c1">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Mark Dalgleish</h5>
+              <p>@markdalgleish</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>It’s also a great platform to build a framework on since it provides a pluggable dev environment.</p>
+            <p>Community is amazing too.</p>
+          </footer>
+        </div>
+        <div class="item itemhidden item5-c1">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Jason Miller</h5>
+              <p>@_developit</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>It’s also a great platform to build a framework on since it provides a pluggable dev environment.</p>
+            <p>Community is amazing too.</p>
+          </footer>
+        </div>
+        <div class="item itemhidden item6-c1">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>David Cramerr</h5>
+              <p>@zeeg</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>It’s also a great platform to build a framework on since it provides a pluggable dev environment.</p>
+            <p>Community is amazing too.</p>
+          </footer>
+        </div>
+      </div>
+      <div class="column column2">
+        <div class="item item4">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Mark Dalgleish</h5>
+              <p>@markdalgleish</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>It’s also a great platform to build a framework on since it provides a pluggable dev environment.</p>
+            <p>Community is amazing too.</p>
+          </footer>
+        </div>
+        <div class="item item5">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Jason Miller</h5>
+              <p>@_developit</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>It’s also a great platform to build a framework on since it provides a pluggable dev environment.</p>
+            <p>Community is amazing too.</p>
+          </footer>
+        </div>
+        <div class="item item6">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>David Cramerr</h5>
+              <p>@zeeg</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>It’s also a great platform to build a framework on since it provides a pluggable dev environment.</p>
+            <p>Community is amazing too.</p>
+          </footer>
+        </div>
+      </div>
+      <div class="column column3">
+        <div class="item item7">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Dion Almaer</h5>
+              <p>@dalmaer</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>I am so excited to see so many great frameworks teaming up on top of vite. So many will benefit. ❤️ to
+              the vite team.</p>
+          </footer>
+        </div>
+        <div class="item item8">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Christoph Nakazawa</h5>
+              <p>@cpojer</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>Vite is gonna eat the (JavaScript) world.</p>
+          </footer>
+        </div>
+        <div class="item item9">
+          <header class="top">
+            <aside class="logo">
+              <div class="foto"></div>
+            </aside>
+            <aside class="information">
+              <h5>Nikolaj</h5>
+              <p>@lopugit</p>
+            </aside>
+          </header>
+          <footer class="bottom">
+            <p>Wow, wow, wow, wow, wow, wow, Vite is..... Vite is.... Wow 🤤🤯🙏</p>
+          </footer>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <aside class="n8-partnership">
+    <div class="sub-container">
+      <h2>Free & open source</h2>
+      <p class="parraf-top">Vite is MIT Licensed and will always be free and open source.</p>
+      <button>Partnership with</button>
+      <section class="partnership-grid">
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#stackblitz"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#labs"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#astroNew"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#void"></use>
+          </svg>
+        </article>
+      </section>
+      <button>Golden Sponsors</button>
+      <section class="sponsors-grid">
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#tailwind"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#prefect"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#jetbrains"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#mux"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#newRemix"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#nx"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#transloadit"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#huly"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#handsotable"></use>
+          </svg>
+        </article>
+        <article>
+          <svg>
+            <use href="spriteSvg.svg#latchbio"></use>
+          </svg>
+        </article>
+      </section>
+    </div>
+  </aside>
+  <section class="n9-building-vite">
+    <div class="subcontainer">
+      <div class="vite-chip">
+        <svg>
+          <use href="spriteSvg.svg#viteChip"></use>
+        </svg>
+        <svg class="logoDeVite">
+          <use href="spriteSvg.svg#vite-logo"></use>
+        </svg>
+      </div>
+      <h2>Start building with Vite</h2>
+      <p>Prepare for a development environment that can finally keep pace with the speed of your mind.</p>
+      <button>Get Started</button>
+    </div>
+  </section>
+  <footer class="n10-footer vite">
+    <p>Released under the MIT License. (be6d5622)</p>
+    <p>Copyright © 2050-present VoidZero Inc. & Vite Contributors</p>
+  </footer>
+</body>
+
+</html>
